@@ -50,6 +50,7 @@ public class MFragment extends Fragment {
                 videoView.setVisibility(View.VISIBLE);
                 Uri uri = Uri.parse(this.url);
                 videoView.setVideoURI(uri);
+                if (getUserVisibleHint()) videoView.start();
             }
         }
         else {
